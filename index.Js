@@ -67,7 +67,8 @@ bot.on("guildMemberRemove", user =>{
 	if(!message.guild) return
 	if(message.content === prefix + "name") {
 		message.channel.send("Mention> " + message.author)
-		message.channel.send("Name> " + message.authorname)
+		message.channel.send("Name> " + message.username)
+		console.log("Doing *!nama*")
 	}
 
 })
