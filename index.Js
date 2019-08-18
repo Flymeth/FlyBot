@@ -56,7 +56,7 @@ bot.on('message', function (message) {
 		message.channel.send(Embed3)
 		console.log("Doing *!info*")
 	}
-	if(!message-guild) return
+	if(!message.guild) return
 	if(message.content === prefix + "hello") {
 		message.channel.send("Bonjour !" + message.author + "!")
 	}
