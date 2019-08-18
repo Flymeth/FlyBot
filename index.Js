@@ -22,26 +22,31 @@ bot.on('message', function (message) {
 			.addField("!webhook", "Affiche un webhook")
 			.addField("!logo", "Affiche le logo de Flymeth")
 			.addField("!info", "Affiche la version du bot, et ses avancements")
+			.addField("!name", "Affiche un mention et votre pseudo Discord")
 			.setFooter("Bot by Flymeth | BETA version")
 		message.channel.send(Embed1)
 		console.log("Doing *!help*")
 	}
 
-	if (message.content === '!serv') {
+bot.on("guildMemberAdd", user =>{
+	user.guild.channels.get("612629378282684446")}.send("Bienvenue " + user + " sur " + user.guild.name + " !")
+}
+
+	if (message.content === prefix + 'serv') {
 		let serveur_name = message.guild.name
 		let serveur_size = message.guild.members.size
 		message.channel.send('Serveur : ' + serveur_name + '\nMembres : ' + serveur_size)
 		console.log("Doing *!serv*")
 	}
-	if (message.content === '!webhook') {
+	if (message.content === prefix + 'webhook') {
 		webhook1.send('Vous vouliez un webhook ? \nMe voilà !')
 		console.log("Doing *!webhook*")
 	}
-	if (message.content === '!logo') {
+	if (message.content === prefix + 'logo') {
 		message.channel.send('Voici le logo de **Flymeth**', {files: ["./Images/Logo flymeth.png"]})
 		console.log("Doing *!logo*")
 	}
-	if (message.content === '!info') {
+	if (message.content === prefix + 'info') {
 		let Embed2 = new Discord.RichEmbed()
 			.setColor("#FF0000")
 			.setDescription("__Information sur le bot__")
@@ -57,8 +62,9 @@ bot.on('message', function (message) {
 		console.log("Doing *!info*")
 	}
 	if(!message.guild) return
-	if(message.content === prefix + "hello") {
-		message.channel.send("Bonjour !" + message.author + "!")
+	if(message.content === prefix + "name") {
+		message.channel.send("Mention> " + message.author)
+		message.channel.send("Name> " + message.username)
 	}
 
 })
