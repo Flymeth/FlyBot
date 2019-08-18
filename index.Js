@@ -32,6 +32,9 @@ bot.on('message', function (message) {
 	if (message.content === '!webhook') {
 		webhook1.send('Vous vouliez un webhook ? \nMe voilà !')
 	}
+	if (message.content === '!logo') {
+		message.channel.send('Voici le logo de **Flymeth**', {files: ["./Images/Logo flymeth.png"]})
+	}
 
 })
 
