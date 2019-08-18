@@ -10,6 +10,12 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
+	let Embed4 = new Discord.RichEmbed()
+		.setColor("#12B400")
+		.setDescription("Bot de nouveau disponible !")
+		.setImage("./Images/Logo flymeth.png")
+		.addBlankField("test")
+		.addField("Nouvelle(s) Fonctionalité(s):", "None")
 })
 
 bot.on('message', function (message) {
