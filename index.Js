@@ -29,7 +29,7 @@ bot.on('message', function (message) {
 	}
 
 bot.on("guildMemberAdd", user =>{
-	user.guild.channels.get("612629378282684446")}.send("Bienvenue " + user + " sur " + user.guild.name + " !")
+	user.guild.channels.get("612629378282684446").send("Bienvenue " + user + " sur " + user.guild.name + " !")
 }
 
 	if (message.content === prefix + 'serv') {
