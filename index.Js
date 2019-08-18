@@ -45,10 +45,13 @@ bot.on('message', function (message) {
 			.setColor("#FF0000")
 			.setDescription("__Information sur le bot__")
 			.addField("Version du bot: ", "1.0.1")
-			.addField("<-->")
-			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
-			.setFooter("Bot by Flymeth | BETA version")
+			.setFooter("Bot by Flymeth | BETA version | Page 1")
 		message.channel.send(Embed2)
+		let Embed3 = new Discord.RichEmbed()
+			.setColor("#FF0000")
+			.setDescription("__Informations suplementaires__")
+			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
+			.setFooter("Bot by Flymeth | BETA version | Page 2")
 		console.log("Doing *!info*")
 	}
 
