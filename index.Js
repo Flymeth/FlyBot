@@ -10,10 +10,6 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
-	if(!message-guild) return
-	if(message.content === prefix + "hello") {
-		message.channel.send("Bonjour !" + message.author)
-	}
 })
 
 bot.on('message', function (message) {
@@ -59,6 +55,10 @@ bot.on('message', function (message) {
 			.setFooter("Bot by Flymeth | BETA version | Page 2")
 		message.channel.send(Embed3)
 		console.log("Doing *!info*")
+	}
+	if(!message-guild) return
+	if(message.content === prefix + "hello") {
+		message.channel.send("Bonjour !" + message.author + "!")
 	}
 
 })
