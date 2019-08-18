@@ -26,7 +26,7 @@ bot.on('message', function (message) {
 			.setFooter("Bot by Flymeth | BETA version")
 		message.channel.send(Embed1)
 		console.log("Doing *!help*")
-	}
+	};
 
 bot.on("guildMemberAdd", user =>{
 	user.guild.channels.get("612629378282684446").send("Bienvenue " + user + " sur " + user.guild.name + " !")
