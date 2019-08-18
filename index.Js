@@ -10,11 +10,6 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
-	let Embed4 = new Discord.RichEmbed()
-		.setDescription("**Le bot est désormais fonctionel !**")
-		.setColor("#00B42E")
-		.addField("__Nouveautée(s):__", "*None*")
-	message.guild.channels.get("612732750801272859").send(Embed4)
 
 })
 
@@ -95,4 +90,4 @@ bot.on("guildMemberRemove", user =>{
 })
 
 
-bot.login(TOKEN)
+bot.login(process.env.TOKEN)
