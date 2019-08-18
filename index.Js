@@ -10,11 +10,6 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
-	let Embed4 = new Discord.RichEmbed()
-		.setColor("#12B400")
-		.setAuthor("Bot de nouveau disponible !")
-		.addField("Nouvelle(s) Fonctionalité(s):", "None")
-	message.channel.get("612732750801272859").send(Embed4)
 })
 
 bot.on('message', function (message) {
