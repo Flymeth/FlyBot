@@ -95,4 +95,4 @@ bot.on("guildMemberRemove", user =>{
 })
 
 
-bot.login(process.env.TOKEN)
+bot.login(TOKEN)
