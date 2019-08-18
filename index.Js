@@ -14,7 +14,15 @@ bot.on('ready', function () {
 		.setDescription("**Le bot est désormais fonctionel !**")
 		.setColor("#00B42E")
 		.addField("__Nouveautée(s):__", "*None*")
-	message.channels.get("612732750801272859").send(Embed4)
+	user.guild.channels.get("612732750801272859").send(Embed4)
+
+	if (message.content === prefix + 'test')
+		let Embed4 = new Discord.RichEmbed()
+			.setDescription("**Le bot est désormais fonctionel !**")
+			.setColor("#00B42E")
+			.addField("__Nouveautée(s):__", "*None*")
+		user.guild.channels.get("612732750801272859").send(Embed4)
+
 
 })
 
