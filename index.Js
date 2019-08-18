@@ -45,7 +45,7 @@ bot.on('message', function (message) {
 			.setColor("#FF0000")
 			.setDescription("__Information sur le bot__")
 			.addField("Version du bot: ", "1.0.1")
-			.addField(" ", " ")
+			.addField("<-->")
 			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
 			.setFooter("Bot by Flymeth | BETA version")
 		message.channel.send(Embed2)
