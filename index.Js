@@ -19,6 +19,7 @@ bot.on('message', function (message) {
 			.addField("!help", "Affiche ce menu")
 			.addField("!serv", "Affiche les statisiques du serveur")
 			.addField("!webhook", "Affiche un webhook")
+			.addField("!logo", "Affiche le logo de Flymeth")
 			.setFooter("Bot by Flymeth")
 		message.channel.send(Embed1)
 		console.log("Doing !help")
