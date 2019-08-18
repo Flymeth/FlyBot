@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const webhook1 = new Discord.WebhookClient('612370842579369996', '-QpPOY2Z1Ehs45CveZJiyQ7NMm4I51HEUN0eTKvp0THmpV82hToiZKFUWCgF7bPIjJFF')
+var prefix = '!'
 
 
 //instance
@@ -9,6 +10,9 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
+	if(message-guild) return
+	if(message.content === prefix + "hello")
+		message.channel.send("Bonjour !")	
 })
 
 bot.on('message', function (message) {
