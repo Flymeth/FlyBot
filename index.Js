@@ -29,11 +29,7 @@ bot.on('message', function (message) {
 	}
 
 bot.on("guildMemberAdd", user =>{
-	let Embed5 = new Discord.RichEmbed
-		.setAuthor("Bienvenue " + user + " sur **" + serveur_name + "** !", user.user.displayAvatarURL)
-		.setColor("#00B4B4")
-		.setFooter("Bot by Flymeth | BETA version")
-	user.guild.channels.get("612629378282684446").send(Embed5)
+	user.guild.channels.get("612629378282684446").send("welcome")
 })
 bot.on("guildMemberRemove", user =>{
 	user.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
