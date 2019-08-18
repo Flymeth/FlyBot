@@ -32,7 +32,7 @@ bot.on("guildMemberAdd", user =>{
 	user.guild.channels.get("612629378282684446").send("Bienvenue " + user + " sur " + user.guild.name + " ! Membres:" + serveur_size)
 })
 bot.on("guildMemberRemove", user =>{
-	user.guild.channel.get("612629378282684446").send(user + " Nous as quitté sur " + serveur_name)
+	user.guild.channels.get("612629378282684446").send("**" + username + "** as quitter le serveur... :rage:")
 })
 
 	if (message.content === prefix + 'serv') {
