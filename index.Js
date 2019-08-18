@@ -16,14 +16,6 @@ bot.on('ready', function () {
 		.addField("__Nouveautée(s):__", "*None*")
 	user.guild.channels.get("612732750801272859").send(Embed4)
 
-	if (message.content === prefix + 'test')
-		let Embed4 = new Discord.RichEmbed()
-			.setDescription("**Le bot est désormais fonctionel !**")
-			.setColor("#00B42E")
-			.addField("__Nouveautée(s):__", "*None*")
-		user.guild.channels.get("612732750801272859").send(Embed4)
-
-
 })
 
 bot.on('message', function (message) {
@@ -40,6 +32,14 @@ bot.on('message', function (message) {
 			.setFooter("Bot by Flymeth | BETA version")
 		message.channels.send(Embed1)
 		console.log("Doing *!help*")
+
+	
+	if (message.content === prefix + 'test')
+		let Embed4 = new Discord.RichEmbed()
+			.setDescription("**Le bot est désormais fonctionel !**")
+			.setColor("#00B42E")
+			.addField("__Nouveautée(s):__", "*None*")
+		user.guild.channels.get("612732750801272859").send(Embed4)
 	}
 
 bot.on("guildMemberAdd", user =>{
