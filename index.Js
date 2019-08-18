@@ -52,6 +52,7 @@ bot.on('message', function (message) {
 			.setDescription("__Informations suplementaires__")
 			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
 			.setFooter("Bot by Flymeth | BETA version | Page 2")
+		message.channel.send(Embed3)
 		console.log("Doing *!info*")
 	}
 
