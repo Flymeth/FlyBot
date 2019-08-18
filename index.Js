@@ -10,7 +10,7 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
-	if(message-guild) return
+	if(!message-guild) return
 	if(message.content === prefix + "hello")
 		message.channel.send("Bonjour !")	
 })
