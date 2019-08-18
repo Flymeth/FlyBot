@@ -14,7 +14,7 @@ bot.on('ready', function () {
 		.setDescription("**Le bot est désormais fonctionel !**")
 		.setColor("#00B42E")
 		.addField("__Nouveautée(s):__", "*None*")
-	bot.guild.channels.get("612732750801272859").send(Embed4)
+	message.guild.channels.get("612732750801272859").send(Embed4)
 
 })
 
@@ -39,7 +39,7 @@ bot.on('message', function (message) {
 			.setDescription("**Le bot est désormais fonctionel !**")
 			.setColor("#00B42E")
 			.addField("__Nouveautée(s):__", "*None*")
-		bot.guild.channels.get("612732750801272859").send(Embed4)
+		message.channels.get("612732750801272859").send(Embed4)
 	}
 
 bot.on("guildMemberAdd", user =>{
@@ -50,9 +50,10 @@ bot.on("guildMemberAdd", user =>{
 		.addField("Ici, tu est en de bonne compagnie !")
 		.setFooter("Bot by Flymeth | BETA version")
 	bot.guild.channels.get("612629378282684446").send(Embed5)
+	console.log(user.user.username + " as join")
 })
 bot.on("guildMemberRemove", user =>{
-	user.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
+	bot.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
 })
 
 	if (message.content === prefix + 'serv') {
