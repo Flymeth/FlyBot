@@ -13,8 +13,6 @@ bot.on('ready', function () {
 	let Embed4 = new Discord.RichEmbed()
 		.setColor("#12B400")
 		.setDescription("Bot de nouveau disponible !")
-		.setImage("./Images/Logo flymeth.png")
-		.addBlankField("test")
 		.addField("Nouvelle(s) Fonctionalité(s):", "None")
 	message.channel.get("612732750801272859").send(Embed4)
 })
