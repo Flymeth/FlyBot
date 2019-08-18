@@ -12,7 +12,7 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	let Embed4 = new Discord.RichEmbed()
 		.setColor("#12B400")
-		.setDescription("Bot de nouveau disponible !")
+		.setAuthor("Bot de nouveau disponible !")
 		.addField("Nouvelle(s) Fonctionalité(s):", "None")
 	message.channel.get("612732750801272859").send(Embed4)
 })
@@ -34,10 +34,14 @@ bot.on('message', function (message) {
 	}
 
 bot.on("guildMemberAdd", user =>{
-	user.guild.channels.get("612629378282684446").send("Bienvenue " + user + " sur " + user.guild.name + " ! Membres:" + serveur_size)
+	let Embed5 = new Discord.RichEmbed
+		.setAuthor("Bienvenue " + user + " sur **" + serveur_name + "** !", user.user.displayAvatarURL)
+		.setColor("#00B4B4")
+		.setFooter("Bot by Flymeth | BETA version")
+	user.guild.channels.get("612629378282684446").send(Embed5)
 })
 bot.on("guildMemberRemove", user =>{
-	user.guild.channels.get("612629378282684446").send("**" + username + "** as quitter le serveur... :rage:")
+	user.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
 })
 
 	if (message.content === prefix + 'serv') {
@@ -72,7 +76,7 @@ bot.on("guildMemberRemove", user =>{
 	if(!message.guild) return
 	if(message.content === prefix + "name") {
 		message.channel.send("Mention> " + message.author)
-		message.channel.send("Name> " + message.username)
+		message.channel.send("Name> " + user.user.username)
 		console.log("Doing *!nama*")
 	}
 
