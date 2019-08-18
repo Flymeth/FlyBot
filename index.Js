@@ -11,7 +11,7 @@ bot.on('ready', function () {
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
 
-})
+};
 
 bot.on('message', function (message) {
 	if (message.content === prefix + 'help') {
@@ -28,7 +28,7 @@ bot.on('message', function (message) {
 		message.channels.send(Embed1)
 		console.log("Doing *!help*")
 	}
-}
+};
 
 bot.on("guildMemberAdd", user =>{
 	let Embed5 = new Discord.RichEmbed()
@@ -39,11 +39,12 @@ bot.on("guildMemberAdd", user =>{
 		.setFooter("Bot by Flymeth | BETA version")
 	message.channels.get("612629378282684446").send(Embed5)
 	console.log(user.user.username + " as join")
-})
+};
 bot.on("guildMemberRemove", user =>{
 	message.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
-})
+};
 
+bot.on("ready"), function () {
 	if (message.content === prefix + 'serv') {
 		let serveur_name = message.guild.name
 		let serveur_size = message.guild.members.size
@@ -73,14 +74,11 @@ bot.on("guildMemberRemove", user =>{
 		message.channel.send(Embed3)
 		console.log("Doing *!info*")
 	}
-	if(!message.guild) return
 	if(message.content === prefix + "name") {
 		message.channel.send("Mention> " + message.author)
 		message.channel.send("Name> " + user.user.username)
-		console.log("Doing *!nama*")
+		console.log("Doing *!name*")
 	}
-
-})
-
+}
 
 bot.login(process.env.TOKEN)
