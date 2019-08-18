@@ -45,7 +45,7 @@ bot.on('message', function (message) {
 			.addField("")
 			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
 			.setFooter("Bot by Flymeth | BETA version")
-		message.channel.send('Embed2')
+		message.channel.send(Embed2)
 	}
 
 })
