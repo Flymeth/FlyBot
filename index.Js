@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const webhook1 = new Discord.WebhookClient('612370842579369996', '-QpPOY2Z1Ehs45CveZJiyQ7NMm4I51HEUN0eTKvp0THmpV82hToiZKFUWCgF7bPIjJFF')
-const prefix = '!'
+var prefix = '!'
 
 
 //instance
@@ -13,7 +13,7 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
-	if (message.content === '!help') {
+	if (message.content === prefix + 'help') {
 		let Embed1 = new Discord.RichEmbed()
 			.setDescription("**__Les commandes:__**")
 			.setColor("#FF5500")
