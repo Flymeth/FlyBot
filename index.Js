@@ -10,6 +10,12 @@ bot.on('ready', function () {
 	console.log("////|-------------|////")
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
+	let Embed4 = new Discord.RichEmbed()
+		.setDescription("**Le bot est désormais fonctionel !**")
+		.setColor("#00B42E")
+		.addField("__Nouveautée(s):__", "*None*")
+	message.channels.get("612732750801272859").send(Embed4)
+
 })
 
 bot.on('message', function (message) {
@@ -24,12 +30,18 @@ bot.on('message', function (message) {
 			.addField("!info", "Affiche la version du bot, et ses avancements")
 			.addField("!name", "Affiche un mention et votre pseudo Discord")
 			.setFooter("Bot by Flymeth | BETA version")
-		message.channel.send(Embed1)
+		message.channels.send(Embed1)
 		console.log("Doing *!help*")
 	}
 
 bot.on("guildMemberAdd", user =>{
-	user.guild.channels.get("612629378282684446").send("welcome")
+	let Embed5 = new Discord.RichEmbed()
+		.setColor("#00B4B4")
+		.setAuthor("Hello " + user + " !")
+		.setDescription("Sur " + user.guild.name + " !")
+		.addField("Ici, tu est en de bonne compagnie !")
+		.setFooter("Bot by Flymeth | BETA version")
+	user.guild.channels.get("612629378282684446").send(Embed5)
 })
 bot.on("guildMemberRemove", user =>{
 	user.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
