@@ -27,15 +27,8 @@ bot.on('message', function (message) {
 			.setFooter("Bot by Flymeth | BETA version")
 		message.channels.send(Embed1)
 		console.log("Doing *!help*")
-
-	
-	if (message.content === prefix + 'test')
-		let Embed4 = new Discord.RichEmbed()
-			.setDescription("**Le bot est désormais fonctionel !**")
-			.setColor("#00B42E")
-			.addField("__Nouveautée(s):__", "*None*")
-		message.channels.get("612732750801272859").send(Embed4)
 	}
+}
 
 bot.on("guildMemberAdd", user =>{
 	let Embed5 = new Discord.RichEmbed()
@@ -44,11 +37,11 @@ bot.on("guildMemberAdd", user =>{
 		.setDescription("Sur " + user.guild.name + " !")
 		.addField("Ici, tu est en de bonne compagnie !")
 		.setFooter("Bot by Flymeth | BETA version")
-	bot.guild.channels.get("612629378282684446").send(Embed5)
+	message.channels.get("612629378282684446").send(Embed5)
 	console.log(user.user.username + " as join")
 })
 bot.on("guildMemberRemove", user =>{
-	bot.guild.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
+	message.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
 })
 
 	if (message.content === prefix + 'serv') {
