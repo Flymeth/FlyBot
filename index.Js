@@ -11,8 +11,9 @@ bot.on('ready', function () {
 	console.log("[!]>|Connection On|<[!]")
 	console.log("////|-------------|////")
 	if(!message-guild) return
-	if(message.content === prefix + "hello")
-		message.channel.send("Bonjour !")	
+	if(message.content === prefix + "hello") {
+		message.channel.send("Bonjour !" + message.author)
+	}
 })
 
 bot.on('message', function (message) {
