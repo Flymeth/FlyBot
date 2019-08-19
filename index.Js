@@ -7,13 +7,14 @@ bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
 })
 
-//Variables:
-
+//Variables (var):
 var prefix = ("!")
 var version = ("1.0.3")
 
-//Quand un membre rejoin le serveur:
+//Variables (const):
+const emoji = bot.emojis.get("305818615712579584")
 
+//Quand un membre rejoin le serveur:
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
@@ -35,14 +36,13 @@ bot.on("guildMemberRemove", user => {
 })
 
 //Conditions/commandes:
-
 bot.on("message", (message) => {
 	if(message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
-		.addField("(https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png)!info", "*Affiche les information du bot*")
+			.addField("!info", "*Affiche les information du bot*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
@@ -56,8 +56,11 @@ bot.on("message", (message) => {
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
 	}
-})
 
+	if(message.content === prefix + "emoji"){
+		message.channel.send("> " + emoji + " <")
+	}
+})
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
