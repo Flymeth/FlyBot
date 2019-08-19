@@ -57,7 +57,12 @@ bot.on("message", (message) => {
 	}
 	
 	if(message.content === prefix + "react") {
+		var messageID = message.id
 		message.react("🤔")
+	}
+
+	if(message.content === prefix + "dereact") {
+		message.guild.get(messageID).clearReactions("🤔")
 	}
 
 })
