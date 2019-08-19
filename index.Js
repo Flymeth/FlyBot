@@ -23,7 +23,7 @@ bot.on("guildMemberRemove", user => {
 
 bot.on("message", (message) => {
 	if(message.content === prefix + "help") {
-		let Embed3 = new Discord.RichEmbed
+		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
 			.setDescription("Les commandes :")
 			.addField("!help", "Affiche ce menu")
