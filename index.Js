@@ -51,7 +51,6 @@ bot.on("message", (message) => {
 			.setColor("#838383")
 			.setAuthor("Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("Version:", version, true)
-			.setURL("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
