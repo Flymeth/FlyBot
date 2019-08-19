@@ -56,14 +56,10 @@ bot.on("message", (message) => {
 		message.channel.send(Embed4)
 	}
 	
-	if(message.content === prefix + "react") {
-		var messageID = message.id
-		message.react("🤔")
-	}
-
-	if(message.content === prefix + "dereact") {
-		message.i
-	}
+	if(message.content === Image)
+		if(message.guild.channels.get === "613055646862147600")
+			let react = message.id
+			message.react(":rage:", react)
 
 })
 
