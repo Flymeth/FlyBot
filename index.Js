@@ -47,7 +47,7 @@ bot.on("message", (message) => {
 			.setAuthor("Information du bot :", 'https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png')
 			.addField("Version:", version, true)
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
-			.addField("Prochaîne mise à jour:", "-Implémentation de nouvelles commandes \n-Activité du bot", true)
+			.addField("Prochaîne mise à jour:", "-Implémentation de nouvelles commandes -Activité du bot", true)
 		message.channel.send(Embed4)
 	}
 })
