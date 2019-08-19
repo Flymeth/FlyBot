@@ -2,6 +2,11 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
+//Activitée:
+bot.on("ready", function () {
+	bot.user.setGame("être en fase de test | !help").catch(console.error)
+})
+
 //Variables:
 
 var prefix = ("!")
