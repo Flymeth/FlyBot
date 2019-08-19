@@ -34,10 +34,10 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "info") {
 		let Embed4 = new Discord.RichEmbed()
 			.setColor("#838383")
-			.setAuthor("Information du bot :", 'https://hebergeur-images.com/fr/vi/d7160af55da8558d17cd18ae936a891c')
+			.setAuthor("Information du bot :", 'https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png')
 			.addField("Version:", "1.0.3", true)
-			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)")
-			.addField("Prochaîne mise à jour:", "Implémentation de plus de commande")
+			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
+			.addField("Prochaîne mise à jour:", "Implémentation de plus de commande", true)
 		message.channel.send(Embed4)
 	}
 })
