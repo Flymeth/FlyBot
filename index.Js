@@ -2,7 +2,10 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 
 //Bot activity:
-client.user.setActivity('être en BETA | !help', { type: 'WATCHING' }).catch(console.error)
+bot.on("ready", function() {
+	client.user.setActivity('être en BETA | !help', { type: 'WATCHING' }).catch(console.error)
+	console.log("BOT READY !")
+})
 
 //Variables:
 
