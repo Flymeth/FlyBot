@@ -12,7 +12,6 @@ var prefix = ("!")
 var version = ("1.0.3")
 
 //Variables (const):
-const emoji = bot.emojis.get("305818615712579584")
 
 //Quand un membre rejoin le serveur:
 bot.on("guildMemberAdd", user => {
@@ -52,14 +51,12 @@ bot.on("message", (message) => {
 			.setColor("#838383")
 			.setAuthor("Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("Version:", version, true)
+			.setURL("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
 	}
 
-	if(message.content === prefix + "emoji"){
-		message.channel.send("> " + emoji + " <")
-	}
 })
 
 //TOKEN caché:
