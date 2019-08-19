@@ -3,13 +3,6 @@ const bot = new Discord.Client()
 const webhook1 = new Discord.WebhookClient('612370842579369996', '-QpPOY2Z1Ehs45CveZJiyQ7NMm4I51HEUN0eTKvp0THmpV82hToiZKFUWCgF7bPIjJFF')
 var prefix = '!'
 
-//instance
-bot.on("ready", function() {
-
-	client.user.setActivity('être en BETA | !help', { type: 'WATCHING' })
-
-});
-
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
@@ -30,14 +23,13 @@ bot.on("guildMemberRemove", user => {
 })
 
 bot.on("message", (message) => {
-
-	if (message.content === prefix + "help") {
-		let Embed3 = new Discord.RichEmbed()
+	if(message.content === prefix + "help") {
+		let Embed3 = new Discord.RichEmbed
 			.setColor("#FFFFFF")
-			.setAuthor("__**Les commandes:**__", bot.displayAvatarURL)
+			.setDescription("Les commandes :")
 			.addField("!help", "Affiche ce menu")
-			.setFooter("FlyBot by Flymeth | BETA version", bot.displayAvatarURL)
-		message.channel.get("612629378282684446").send(Embed3)
+			.setFooter("FlyBot by Flymeth | BETA version")
+		message.channel.send(Embed3)
 	}
 })
 
