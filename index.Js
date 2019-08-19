@@ -55,6 +55,10 @@ bot.on("message", (message) => {
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
 	}
+	
+	if(message.content === prefix + "react") {
+		message.react("🤔")
+	}
 
 })
 
