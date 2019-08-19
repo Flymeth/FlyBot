@@ -42,7 +42,7 @@ bot.on("message", (message) => {
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
-			.addField("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png !info", "*Affiche les information du bot*")
+			.addField("[https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png]!info", "*Affiche les information du bot*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
