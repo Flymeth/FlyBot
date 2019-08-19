@@ -3,82 +3,20 @@ const bot = new Discord.Client()
 const webhook1 = new Discord.WebhookClient('612370842579369996', '-QpPOY2Z1Ehs45CveZJiyQ7NMm4I51HEUN0eTKvp0THmpV82hToiZKFUWCgF7bPIjJFF')
 var prefix = '!'
 
+bot.on("guildMemberAdd", user => {
+	let Embed1 = new Discord.RichEmbed()
+		.setColor("#00F23E")
+		.setAuthor("Bienvenue " + user + " sur " + user.guild.name + " !", user.user.displayAvatarURL)
+		.setFooter("FlyBot by Flymeth | BETA version")
+	user.guild.channels.get("612629378282684446").send(Embed1)
 
-//instance
-bot.on('ready', function () {
-	bot.user.setActivity('En face de test [Do !help]', { type: 'PLAYING' }).catch(console.error)
-	console.log("////|-------------|////")
-	console.log("[!]>|Connection On|<[!]")
-	console.log("////|-------------|////")
+})
 
-});
-
-bot.on('message', function (message) {
-	if (message.content === prefix + 'help') {
-		let Embed1 = new Discord.RichEmbed()
-			.setDescription("**__Les commandes:__**")
-			.setColor("#FF5500")
-			.addField("!help", "Affiche ce menu")
-			.addField("!serv", "Affiche les statisiques du serveur")
-			.addField("!webhook", "Affiche un webhook")
-			.addField("!logo", "Affiche le logo de Flymeth")
-			.addField("!info", "Affiche la version du bot, et ses avancements")
-			.addField("!name", "Affiche un mention et votre pseudo Discord")
-			.setFooter("Bot by Flymeth | BETA version")
-		message.channels.send(Embed1)
-		console.log("Doing *!help*")
-	}
-});
-
-bot.on("guildMemberAdd", user =>{
-	let Embed5 = new Discord.RichEmbed()
-		.setColor("#00B4B4")
-		.setAuthor("Hello " + user + " !")
-		.setDescription("Sur " + user.guild.name + " !")
-		.addField("Ici, tu est en de bonne compagnie !")
-		.setFooter("Bot by Flymeth | BETA version")
-	message.channels.get("612629378282684446").send(Embed5)
-	console.log(user.user.username + " as join")
-});
-bot.on("guildMemberRemove", user =>{
-	message.channels.get("612629378282684446").send("**" + user.user.username + "** as quitter le serveur... :rage:")
-});
-
-bot.on("ready"), function () {
-	if (message.content === prefix + 'serv') {
-		let serveur_name = message.guild.name
-		let serveur_size = message.guild.members.size
-		message.channel.send('Serveur : ' + serveur_name + '\nMembres : ' + serveur_size)
-		console.log("Doing *!serv*")
-	}
-	if (message.content === prefix + 'webhook') {
-		webhook1.send('Vous vouliez un webhook ? \nMe voilà !')
-		console.log("Doing *!webhook*")
-	}
-	if (message.content === prefix + 'logo') {
-		message.channel.send('Voici le logo de **Flymeth**', {files: ["./Images/Logo flymeth.png"]})
-		console.log("Doing *!logo*")
-	}
-	if (message.content === prefix + 'info') {
-		let Embed2 = new Discord.RichEmbed()
-			.setColor("#FF0000")
-			.setDescription("__Information sur le bot__")
-			.addField("Version du bot: ", "1.0.1")
-			.setFooter("Bot by Flymeth | BETA version | Page 1")
-		message.channel.send(Embed2)
-		let Embed3 = new Discord.RichEmbed()
-			.setColor("#FF0000")
-			.setDescription("__Informations suplementaires__")
-			.addField("Avancements du bot:", "pour l'instant, seul des commandes sont disponible. \n**Prochaîne mise à jour:** \n-Message de bienvenue \n-Image dans un Embed")
-			.setFooter("Bot by Flymeth | BETA version | Page 2")
-		message.channel.send(Embed3)
-		console.log("Doing *!info*")
-	}
-	if(message.content === prefix + "name") {
-		message.channel.send("Mention> " + message.author)
-		message.channel.send("Name> " + user.user.username)
-		console.log("Doing *!name*")
-	}
-}
+bot.on("guildMemberRemove", user => {
+	let Embed2 = new Discord.RichEmbed()
+		.setColor("#F20000")
+		.setAuthor(user.user.username + " a quitté le serveur... :rage:")
+	user.guild.channels.get("612629378282684446").send(Embed2)
+})
 
 bot.login(process.env.TOKEN)
