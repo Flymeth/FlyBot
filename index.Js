@@ -42,8 +42,7 @@ bot.on("message", (message) => {
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
-			.setFooter("FlyBot by Flymeth | BETA version | " + Date)
-			.setTimestamp(Date)
+			.setFooter("FlyBot by Flymeth | BETA version | " + setTimestamp(Date))
 		message.channel.send(Embed3)
 	}
 
@@ -63,7 +62,7 @@ bot.on("message", (message) => {
 	}
 
 	if(message.content === prefix + "dereact") {
-		message.guild.defaultMessageNotifications
+		message.i
 	}
 
 })
