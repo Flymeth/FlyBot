@@ -6,7 +6,7 @@ var prefix = '!'
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
-		.setAuthor("Bienvenue " + user + " sur " + user.guild.name + " !", user.user.displayAvatarURL)
+		.setAuthor("Bienvenue " + user.user.username + " sur " + user.guild.name + " ! :heart:", user.user.displayAvatarURL)
 		.setFooter("FlyBot by Flymeth | BETA version")
 	user.guild.channels.get("612629378282684446").send(Embed1)
 
@@ -15,7 +15,8 @@ bot.on("guildMemberAdd", user => {
 bot.on("guildMemberRemove", user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
-		.setAuthor(user.user.username + " a quitté le serveur... :rage:")
+		.setAuthor(user.user.username + " a quitté le serveur...")
+		.setFooter("FlyBot by Flymeth | BETA version")
 	user.guild.channels.get("612629378282684446").send(Embed2)
 })
 
