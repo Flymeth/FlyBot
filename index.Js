@@ -3,11 +3,12 @@ const bot = new Discord.Client()
 const webhook1 = new Discord.WebhookClient('612370842579369996', '-QpPOY2Z1Ehs45CveZJiyQ7NMm4I51HEUN0eTKvp0THmpV82hToiZKFUWCgF7bPIjJFF')
 var prefix = '!'
 
+//instance
 bot.on("ready", function() {
 
 	client.user.setActivity('être en BETA | !help', { type: 'WATCHING' })
 
-})
+});
 
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
