@@ -1,6 +1,12 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+
+//Variables:
+
 var prefix = ("!")
+var version = ("1.0.3")
+
+//Quand un membre arrive / quitte le serveur:
 
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
@@ -21,12 +27,15 @@ bot.on("guildMemberRemove", user => {
 	user.guild.channels.get("612629378282684446").send(Embed2)
 })
 
+//Conditions/commandes:
+
 bot.on("message", (message) => {
 	if(message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
+			.addField("!info", "*Affiche les information du bot*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
@@ -35,11 +44,13 @@ bot.on("message", (message) => {
 		let Embed4 = new Discord.RichEmbed()
 			.setColor("#838383")
 			.setAuthor("Information du bot :", 'https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png')
-			.addField("Version:", "1.0.3", true)
+			.addField("Version:", version, true)
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("Prochaîne mise à jour:", "Implémentation de plus de commande", true)
 		message.channel.send(Embed4)
 	}
 })
 
+
+//TOKEN caché:
 bot.login(process.env.TOKEN)
