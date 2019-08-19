@@ -43,7 +43,7 @@ bot.on("message", (message) => {
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
 			.setFooter("FlyBot by Flymeth | BETA version | ")
-			.setTimestamp(new Date)
+			.setTimestamp(Date)
 		message.channel.send(Embed3)
 	}
 
