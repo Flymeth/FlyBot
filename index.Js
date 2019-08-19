@@ -12,7 +12,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.3")
 
-//Quand un membre arrive / quitte le serveur:
+//Quand un membre rejoin le serveur:
 
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
@@ -24,6 +24,7 @@ bot.on("guildMemberAdd", user => {
 
 })
 
+//Quand un membre quitte le serveur:
 bot.on("guildMemberRemove", user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
@@ -41,7 +42,7 @@ bot.on("message", (message) => {
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
-			.addField("!info", "*Affiche les information du bot*")
+			.addField("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png !info", "*Affiche les information du bot*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
@@ -49,12 +50,11 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "info") {
 		let Embed4 = new Discord.RichEmbed()
 			.setColor("#838383")
-			.setAuthor("Information du bot :", 'https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png')
+			.setAuthor("Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("Version:", version, true)
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
-		message.channel.send(Embed3)
 	}
 })
 
