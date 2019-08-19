@@ -62,7 +62,7 @@ bot.on("message", (message) => {
 	}
 
 	if(message.content === prefix + "dereact") {
-		message.clearReactions("🤔", messageID)
+		message.clearReactions("🤔", <messageID></messageID>)
 	}
 
 })
