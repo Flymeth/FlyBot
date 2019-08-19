@@ -42,7 +42,7 @@ bot.on("message", (message) => {
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
-			.setFooter("FlyBot by Flymeth | BETA version | " + setTimestamp(Date))
+			.setFooter("FlyBot by Flymeth | BETA version | ")
 		message.channel.send(Embed3)
 	}
 
@@ -55,11 +55,6 @@ bot.on("message", (message) => {
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
 	}
-	
-	if(message.content === Image)
-		if(message.guild.channels.get === "613055646862147600")
-			let react = message.id
-			message.react(":rage:", react)
 
 })
 
