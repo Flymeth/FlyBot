@@ -25,8 +25,8 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
-			.setDescription("Les commandes :")
-			.addField("!help", "Affiche ce menu")
+			.setTitle("__**Les commandes:**__")
+			.addField("!help", "*Affiche ce menu*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
