@@ -6,7 +6,8 @@ var prefix = '!'
 bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
-		.setAuthor("Bienvenue " + user.user.username + " sur " + user.guild.name + " ! :heart:", user.user.displayAvatarURL)
+		.setAuthor("Nouveau membre !", user.user.displayAvatarURL)
+		.setDescription(user + " viens de rejoindre " + user.guild.name + " ! :heart:")
 		.setFooter("FlyBot by Flymeth | BETA version")
 	user.guild.channels.get("612629378282684446").send(Embed1)
 
