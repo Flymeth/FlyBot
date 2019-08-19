@@ -25,10 +25,20 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
-			.setTitle("__**Les commandes:**__")
+			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
+	}
+
+	if(message.content === prefix + "info") {
+		let Embed4 = new Discord.RichEmbed()
+			.setColor("#838383")
+			.setAuthor("Information du bot :", 'https://hebergeur-images.com/fr/vi/d7160af55da8558d17cd18ae936a891c')
+			.addField("Version:", "1.0.3", true)
+			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)")
+			.addField("Prochaîne mise à jour:", "Implémentation de plus de commande")
+		message.channel.send(Embed4)
 	}
 })
 
