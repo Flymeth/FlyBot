@@ -25,12 +25,14 @@ bot.on("guildMemberRemove", user => {
 })
 
 bot.on("message", (message) => {
-	message.content === prefix + "help"
+	if (message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
 			.setAuthor("__**Les commandes:**__", bot.displayAvatarURL)
 			.addField("!help", "Affiche ce menu")
 			.setFooter("FlyBot by Flymeth | BETA version", bot.displayAvatarURL)
+		user.guild.channels.get("612629378282684446").send(Embed3)
+	}
 })
 
 bot.login(process.env.TOKEN)
