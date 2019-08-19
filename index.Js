@@ -18,10 +18,19 @@ bot.on("guildMemberAdd", user => {
 bot.on("guildMemberRemove", user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
-		.setAuthor("Un membre viens de quitter le serveur !")
+		.setTitle("Un membre viens de quitter le serveur !")
 		.setDescription(user.user.username + " viens de nous quitter... :rage: !")
 		.setFooter("FlyBot by Flymeth | BETA version")
 	user.guild.channels.get("612629378282684446").send(Embed2)
+})
+
+bot.on("message", (message) => {
+	message.content === prefix + "help"
+		let Embed3 = new Discord.RichEmbed()
+			.setColor("#FFFFFF")
+			.setAuthor("__**Les commandes:**__", bot.displayAvatarURL)
+			.addField("!help", "Affiche ce menu")
+			.setFooter("FlyBot by Flymeth | BETA version", bot.displayAvatarURL)
 })
 
 bot.login(process.env.TOKEN)
