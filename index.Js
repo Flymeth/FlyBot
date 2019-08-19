@@ -16,7 +16,8 @@ bot.on("guildMemberAdd", user => {
 bot.on("guildMemberRemove", user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
-		.setAuthor(user.user.username + " a quitté le serveur...")
+		.setAuthor("Un membre viens de quitter le serveur !")
+		.setDescription(user.user.username + " viens de nous quitter... :rage: !")
 		.setFooter("FlyBot by Flymeth | BETA version")
 	user.guild.channels.get("612629378282684446").send(Embed2)
 })
