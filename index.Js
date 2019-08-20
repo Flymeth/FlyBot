@@ -72,9 +72,5 @@ bot.on("message", (message) => {
 
 })
 
-bot.on("message", (Image) => {
-	message.channel.send("Tu viens d'envoyer une image, " + user)
-})
-
 //TOKEN caché:
 bot.login(process.env.TOKEN)
