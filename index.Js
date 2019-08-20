@@ -62,6 +62,13 @@ bot.on("message", (message) => {
 		message.channel.send(Embed4)
 	}
 
+	if(message.content === prefix + "servinfo") {
+		let Embed5 = new Discord.RichEmbed()
+		.setAuthor("Information concernant le serveur :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
+		.setThumbnail(guild.guild.displayAvatarURL)
+		.addField("Membresdu serveur:", serveur_size)
+	}
+
 })
 
 //TOKEN caché:
