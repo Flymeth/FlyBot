@@ -5,9 +5,7 @@ const bot = new Discord.Client()
 //instance
 bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
-	message.guild.channels.get("613055646862147600").send("===========")
-	message.guild.channels.get("613055646862147600").send("BOT ALLUME")
-	message.guild.channels.get("613055646862147600").send("===========")
+	
 })
 
 //Variables (var):
@@ -59,6 +57,18 @@ bot.on("message", (message) => {
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
 		message.channel.send(Embed4)
 	}
+
+	if(message.content === prefix + "reaction") {
+		let R1 = message.guild.id
+		message.react(":tada:")
+		message.channel.send(user + ", la réaction ```:tada:``` a bien été rajoutée au message !")
+	}
+
+	if(message.content === prefix + "dereact")
+		message.id(R1)
+		message.clearReactions(":tada:")
+		message.channel.send(user + ", la réaction ```:tada:``` a bien été retirée du message !")
+
 
 })
 
