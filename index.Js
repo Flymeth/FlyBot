@@ -62,19 +62,6 @@ bot.on("message", (message) => {
 		message.channel.send(Embed4)
 	}
 
-	if(message.content === prefix + "reaction") {
-		let R1 = message.guild.id
-		message.react(":tada:")
-		message.channel.send(user + ", la réaction ```:tada:``` a bien été rajoutée au message !")
-	}
-
-	if(message.content === prefix + "dereact") {
-		message.id(R1)
-		message.clearReactions(":tada:")
-		message.channel.send(user + ", la réaction ```:tada:``` a bien été retirée du message !")
-	}
-
-
 })
 
 //TOKEN caché:
