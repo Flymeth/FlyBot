@@ -64,7 +64,7 @@ bot.on("message", (message) => {
 
 	if(message.content === prefix + "servinfo") {
 		let Embed5 = new Discord.RichEmbed()
-		.setAuthor("Information concernant le serveur :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
+		.setTitle("Information du serveur:")
 		.setThumbnail(message.guild.icon)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 	message.channel.send(Embed5)
