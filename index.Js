@@ -5,6 +5,10 @@ const bot = new Discord.Client()
 //instance
 bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
+	console.log("{======|***********|======}")
+	console.log("{======| BOT READY	|======}")
+	console.log("{======|***********|======}")
+
 	
 })
 
@@ -64,10 +68,11 @@ bot.on("message", (message) => {
 		message.channel.send(user + ", la réaction ```:tada:``` a bien été rajoutée au message !")
 	}
 
-	if(message.content === prefix + "dereact")
+	if(message.content === prefix + "dereact") {
 		message.id(R1)
 		message.clearReactions(":tada:")
 		message.channel.send(user + ", la réaction ```:tada:``` a bien été retirée du message !")
+	}
 
 
 })
