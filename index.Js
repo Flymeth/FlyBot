@@ -67,6 +67,7 @@ bot.on("message", (message) => {
 		.setAuthor("Information concernant le serveur :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 		.setThumbnail(message.guild.iconURL)
 		.addField("Membresdu serveur:", message.guild.memberCount)
+	message.channel.send(Embed5)
 	}
 
 })
