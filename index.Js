@@ -10,6 +10,8 @@ bot.on("ready", function () {
 	console.log("{======| BOT READY	|======}")
 	console.log("{======|***********|======}")
 
+	user.guild.channels.get("613055646862147600").send(bot.name + " est prêt à foncctionner !")
+
 	
 })
 
