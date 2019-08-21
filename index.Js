@@ -6,13 +6,6 @@ const bot = new Discord.Client()
 bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
 	
-	console.log("{======|***********|======}")
-	console.log("{======| BOT READY	|======}")
-	console.log("{======|***********|======}")
-
-	user.guild.channels.get("613055646862147600").send(bot.name + " est prêt à foncctionner !")
-
-	
 })
 
 //Variables (var):
