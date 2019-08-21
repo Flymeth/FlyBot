@@ -69,5 +69,9 @@ bot.on("message", (message) => {
 
 })
 
+bot.on("ready", function() {
+	setTimeout(DelayNode, "5")
+})
+
 //TOKEN caché:
 bot.login(process.env.TOKEN)
