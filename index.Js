@@ -31,7 +31,7 @@ bot.on("guildMemberAdd", user => {
 		.setThumbnail(user.user.displayAvatarURL)
 		.setDescription(user + " viens de rejoindre " + user.guild.name + " ! :heart:")
 		.setFooter("FlyBot by Flymeth | BETA version")
-	user.guild.channels.get("612629378282684446").send(Embed1)
+	bot.guild.channels.get("612629378282684446").send(Embed1)
 
 })
 
@@ -42,7 +42,7 @@ bot.on("guildMemberRemove", user => {
 		.setTitle("Un membre viens de quitter le serveur !")
 		.setDescription(user.user.username + " viens de nous quitter... :rage: !")
 		.setFooter("FlyBot by Flymeth | BETA version")
-	user.guild.channels.get("612629378282684446").send(Embed2)
+	bot.guild.channels.get("612629378282684446").send(Embed2)
 })
 
 //Conditions/commandes:
@@ -86,11 +86,11 @@ setInterval(() => {
 	let Embed7 = new Discord.RichEmbed()
 		.setColor("#000000")
 		.setTitle("Debug message...")
-		.addField("Si ce message aparaît toutes les" + Interval*1000 + ", cela veut dire que le bot est bien n'a pas crash !")
+		.addField("Si ce message aparaît toutes les" + Interval + " seconde(s), cela veut dire que le bot est bien n'a pas crash !")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(debugchannel).send(Embed7)
 
-}, Interval);
+}, Interval*1000);
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
