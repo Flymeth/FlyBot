@@ -5,6 +5,13 @@ const bot = new Discord.Client()
 //instance
 bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
+
+	let Embed6 = new Discord.RichEmbed()
+		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
+		.setImage(bot.user.displayAvatarURL)
+		.addBlankField()
+		.setFooter("lyBot by Flymeth | BETA version | " + Date)
+	bot.channels.get("613055646862147600").send(Embed6).catch(console.error)
 	
 })
 
@@ -44,7 +51,7 @@ bot.on("message", (message) => {
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
-			.setFooter("FlyBot by Flymeth | BETA version | ")
+			.setFooter("FlyBot by Flymeth | BETA version | " + Date)
 		message.channel.send(Embed3)
 	}
 
@@ -67,10 +74,6 @@ bot.on("message", (message) => {
 	message.channel.send(Embed5)
 	}
 
-})
-
-bot.on("ready", function() {
-	setTimeout(DelayNode, "5")
 })
 
 //TOKEN caché:
