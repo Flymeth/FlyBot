@@ -5,6 +5,7 @@ const bot = new Discord.Client()
 //instance
 bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
+	
 	console.log("{======|***********|======}")
 	console.log("{======| BOT READY	|======}")
 	console.log("{======|***********|======}")
@@ -65,7 +66,8 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "servinfo") {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
-		.setThumbnail(message.guild.icon)
+		.addField("test", "test", true)
+		.setImage(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 	message.channel.send(Embed5)
 	}
