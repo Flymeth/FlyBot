@@ -9,14 +9,17 @@ bot.on("ready", function () {
 	let Embed6 = new Discord.RichEmbed()
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
+		.setColor("#10FF9B")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
-	bot.channels.get("613055646862147600").send(Embed6).catch(console.error)
+	bot.channels.get(debugchannel).send(Embed6).catch(console.error)
 	
 })
 
 //Variables (var):
 var prefix = ("!")
 var version = ("1.0.3")
+var debugchannel = ("613055646862147600")
+var Interval = (10)
 
 //Variables (const):
 
@@ -50,7 +53,7 @@ bot.on("message", (message) => {
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
-			.addField("!servinfo", "*Affiche les information du serveur *(toujours en test)")
+			.addField("!servinfo", "*Affiche les information du serveur* (toujours en test)")
 			.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 		message.channel.send(Embed3)
 	}
@@ -77,6 +80,17 @@ bot.on("message", (message) => {
 	}
 
 })
+
+setInterval(() => {
+
+	let Embed7 = new Discord.RichEmbed()
+		.setColor("#000000")
+		.setTitle("Debug message...")
+		.addField("Si ce message aparaît toutes les" + Interval*1000 + ", cela veut dire que le bot est bien n'a pas crash !")
+		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
+	bot.channels.get(debugchannel).send(Embed7)
+
+}, Interval);
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
