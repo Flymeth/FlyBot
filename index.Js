@@ -62,7 +62,7 @@ bot.on("message", (message) => {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
 		.addField("test", "test", true)
-		.setImage(message.guild.iconURL)
+		.setImage(message.guild.icon)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 	message.channel.send(Embed5)
 	}
