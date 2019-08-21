@@ -9,8 +9,7 @@ bot.on("ready", function () {
 	let Embed6 = new Discord.RichEmbed()
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
-		.addBlankField()
-		.setFooter("lyBot by Flymeth | BETA version | " + Date)
+		.setFooter("FlyBot by Flymeth | BETA version | " + Date)
 	bot.channels.get("613055646862147600").send(Embed6).catch(console.error)
 	
 })
