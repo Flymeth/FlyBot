@@ -19,7 +19,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.3")
 var debugchannel = ("613055646862147600")
-var Interval = (10)
+var Interval = (3)
 
 //Variables (const):
 
@@ -86,7 +86,7 @@ setInterval(() => {
 	let Embed7 = new Discord.RichEmbed()
 		.setColor("#000000")
 		.setTitle("Debug message...")
-		.addField("Si ce message aparaît toutes les" + Interval + " seconde(s), cela veut dire que le bot est bien n'a pas crash !")
+		.addField("Si ce message aparaît toutes les " + Interval + " seconde(s), cela veut dire que le bot n'a pas crash !", " ")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(debugchannel).send(Embed7)
 
