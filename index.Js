@@ -9,7 +9,7 @@ bot.on("ready", function () {
 	let Embed6 = new Discord.RichEmbed()
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
-		.setFooter("FlyBot by Flymeth | BETA version | " + Date)
+		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get("613055646862147600").send(Embed6).catch(console.error)
 	
 })
@@ -50,7 +50,8 @@ bot.on("message", (message) => {
 			.setTitle("__Les commandes:__")
 			.addField("!help", "*Affiche ce menu*")
 			.addField("!info", "*Affiche les information du bot*")
-			.setFooter("FlyBot by Flymeth | BETA version | " + Date)
+			.addField("!servinfo", "*Affiche les information du serveur *(toujours en test)")
+			.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 		message.channel.send(Embed3)
 	}
 
@@ -61,6 +62,7 @@ bot.on("message", (message) => {
 			.addField("Version:", version, true)
 			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
+			.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 		message.channel.send(Embed4)
 	}
 
@@ -68,8 +70,9 @@ bot.on("message", (message) => {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
 		.addField("test", "test", true)
-		.setImage(message.guild.icon, true)
+		.setImage(message.guild.icon)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
+		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	message.channel.send(Embed5)
 	}
 
