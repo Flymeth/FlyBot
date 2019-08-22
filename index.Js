@@ -4,8 +4,6 @@ const bot = new Discord.Client()
 
 //instance
 bot.on("ready", function () {
-	bot.user.setGame("être en fase de test | !help").catch(console.error)
-
 	let Embed6 = new Discord.RichEmbed()
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
@@ -90,7 +88,19 @@ setInterval(() => {
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(debugchannel).send(Embed7)
 
-}, Interval*1000);
+}, Interval*1000)
+
+bot.on("ready", function() {
+
+	setInterval(() => {
+		bot.user.setGame("être en fase de test | !help").catch(console.error)
+	}, 3000);
+
+	setInterval(() => {
+		bot.user.setGame("FlyBot").catch(console.error)
+	}, 3000);
+
+});
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
