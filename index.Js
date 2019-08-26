@@ -86,7 +86,7 @@ setInterval(() => {
 	let Embed7 = new Discord.RichEmbed()
 		.setColor("#000000")
 		.setTitle("Debug message...")
-		.addField("Si ce message aparaît toutes les " + interv + " seconde(s), cela veut dire que le bot n'a pas crash !", " ")
+		.addField("Si ce message aparaît toutes les " + interv + " seconde(s),", "cela veut dire que le bot n'a pas crash !")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get("613055646862147600").send(Embed7)
 
