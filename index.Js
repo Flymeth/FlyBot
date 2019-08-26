@@ -19,8 +19,8 @@ bot.on("ready", function () {
 //Variables (var):
 var prefix = ("!")
 var version = ("1.0.3")
-let debugchannel = ("613055646862147600")
-var Interval = ("3") //L'interval est défini en seconde !
+var debugchannel = ("613055646862147600")
+var interv = ("3") //L'interval est défini en seconde !
 
 //Variables (const):
 
@@ -91,7 +91,7 @@ setInterval(() => {
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(debugchannel).send(Embed7)
 
-}, Interval*1000)
+}, Interval*interv)
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
