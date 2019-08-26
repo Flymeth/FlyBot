@@ -73,7 +73,7 @@ bot.on("message", (message) => {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
 		.addField("test", "test", true)
-		.setImage(message.guild.icon)
+		.setImage(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	message.channel.send(Embed5)
