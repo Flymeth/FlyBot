@@ -91,7 +91,7 @@ setInterval(() => {
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(debugchannel).send(Embed7)
 
-}, Interval*interv)
+}, Interval*$(interv))
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
