@@ -89,9 +89,9 @@ setInterval(() => {
 		.setTitle("Debug message...")
 		.addField("Si ce message aparaît toutes les " + Interval + " seconde(s), cela veut dire que le bot n'a pas crash !", " ")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
-	bot.channels.get(debugchannel).send(Embed7)
+	bot.channels.get("613055646862147600").send(Embed7)
 
-}, Interval*$(interv))
+}, Interval*1000)
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
