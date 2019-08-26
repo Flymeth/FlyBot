@@ -19,7 +19,7 @@ bot.on("ready", function () {
 //Variables (var):
 var prefix = ("!")
 var version = ("1.0.3")
-var debugchannel = ("613055646862147600")
+let debugchannel = ("613055646862147600")
 var Interval = ("3") //L'interval est défini en seconde !
 
 //Variables (const):
