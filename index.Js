@@ -12,7 +12,7 @@ bot.on("ready", function () {
 		.setImage(bot.user.displayAvatarURL)
 		.setColor("#10FF9B")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
-	bot.channels.get(debugchannel).send(Embed6).catch(console.error)
+	bot.channels.get(dbchannel).send(Embed6).catch(console.error)
 	
 })
 
@@ -20,6 +20,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.3")
 var interv = ("3") //L'interval est défini en seconde !
+var dbchannel = ("613055646862147600")
 
 //Variables (const):
 
