@@ -75,7 +75,7 @@ bot.on("message", (message) => {
 		.setTitle("Information du serveur:")
 		.setImage(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
-		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
+		.setFooter("FlyBot by Flymeth | BETA version | " + Date(String.name))
 	message.channel.send(Embed5)
 	}
 
