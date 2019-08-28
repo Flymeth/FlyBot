@@ -73,7 +73,6 @@ bot.on("message", (message) => {
 	if(message.content === prefix + "servinfo") {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
-		.addField("test", "test", true)
 		.setImage(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
