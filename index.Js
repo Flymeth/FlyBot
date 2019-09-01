@@ -82,6 +82,7 @@ bot.on("message", (message) => {
 		let Embed7 = new Discord.RichEmbed()
 		.setImage(message.guild.iconURL)
 		.setFooter("FlyBot by Flymeth | BETA version")
+	message.channel.send(Embed7)
 	}
 
 })
