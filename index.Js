@@ -52,31 +52,36 @@ bot.on("message", (message) => {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
-			.addField("!help", "*Affiche ce menu*")
-			.addField("!info", "*Affiche les information du bot*")
-			.addField("!servinfo", "*Affiche les information du serveur* (toujours en test)")
-			.setFooter("FlyBot by Flymeth | BETA version | " + Date())
+			.addField("> !help", "*Affiche ce menu*")
+			.addField("> !info", "*Affiche les information du bot*")
+			.addField("> !servinfo", "*Affiche les information du serveur* (toujours en test)")
+			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
 
 	if(message.content === prefix + "info") {
 		let Embed4 = new Discord.RichEmbed()
 			.setColor("#838383")
-			.setAuthor("Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
-			.addField("Version:", version, true)
-			.addField("Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
-			.addField("Prochaîne mise à jour:", "-Ajout de nouvelles commandes", true)
-			.setFooter("FlyBot by Flymeth | BETA version | " + Date())
+			.setAuthor(":information_source: Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
+			.addField("🌐 Version:", version, true)
+			.addField("👨‍💻 Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
+			.addField("💬 Prochaîne mise à jour:", "-Ajout de nouvelles commandes \n-Réglage de la date", true)
+			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed4)
 	}
 
 	if(message.content === prefix + "servinfo") {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
-		.setImage(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
-		.setFooter("FlyBot by Flymeth | BETA version | " + Date(String.name))
+		.setFooter("FlyBot by Flymeth | BETA version")
 	message.channel.send(Embed5)
+	}
+
+	if(message.content === prefix + "icon") {
+		let Embed7 = new Discord.RichEmbed()
+		.setImage(message.guild.iconURL)
+		.setFooter("FlyBot by Flymeth | BETA version")
 	}
 
 })
