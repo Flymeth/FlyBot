@@ -21,6 +21,7 @@ var prefix = ("!")
 var version = ("1.0.3")
 var interv = ("3") //L'interval est défini en seconde !
 var dbchannel = ("613055646862147600")
+let icon = new icon
 
 //Variables (const):
 
@@ -79,7 +80,7 @@ bot.on("message", (message) => {
 	}
 
 	if(message.content === prefix + "icon") {
-	message.channel.send("l'icon du serveur est :" + message.guild.iconURL)
+	message.channel.send("l'icon du serveur est :" + icon)
 	}
 
 })
