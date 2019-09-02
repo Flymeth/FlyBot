@@ -79,10 +79,7 @@ bot.on("message", (message) => {
 	}
 
 	if(message.content === prefix + "icon") {
-		let Embed7 = new Discord.RichEmbed()
-		.setImage(message.guild.iconURL)
-		.setFooter("FlyBot by Flymeth | BETA version")
-	message.channel.send("l'icon du serveur est :" +message.guild.iconURL)
+	message.channel.send("l'icon du serveur est :" + message.guild.iconURL)
 	}
 
 })
