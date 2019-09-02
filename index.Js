@@ -26,7 +26,7 @@ let icon = new icon
 //Variables (const):
 
 //Quand un membre rejoin le serveur:
-bot.on(guildMemberAdd, user => {
+bot.on("guildMemberAdd", user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
 		.setAuthor("Nouveau membre !")
@@ -38,7 +38,7 @@ bot.on(guildMemberAdd, user => {
 })
 
 //Quand un membre quitte le serveur:
-bot.on(guildMemberRemove, user => {
+bot.on("guildMemberRemove", user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
 		.setTitle("Un membre viens de quitter le serveur !")
