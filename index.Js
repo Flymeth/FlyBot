@@ -8,6 +8,7 @@ bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
 
 	let Embed6 = new Discord.RichEmbed()
+		.setTitle("@Flymeth#6242")
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
 		.setColor("#10FF9B")
@@ -79,7 +80,7 @@ bot.on("message", (message) => {
 	}
 
 	if(message.content === prefix + "icon") {
-		message.reply(message.guild.icon)
+		message.reply(message.guild.iconURL)
 	}
 })
 
