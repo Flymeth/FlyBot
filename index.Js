@@ -25,7 +25,7 @@ var dbchannel = ("613055646862147600")
 //Variables (const):
 
 //Quand un membre rejoin le serveur:
-bot.on("guildMemberAdd", user => {
+bot.on(guildMemberAdd, user => {
 	let Embed1 = new Discord.RichEmbed()
 		.setColor("#00F23E")
 		.setAuthor("Nouveau membre !")
@@ -37,7 +37,7 @@ bot.on("guildMemberAdd", user => {
 })
 
 //Quand un membre quitte le serveur:
-bot.on("guildMemberRemove", user => {
+bot.on(guildMemberRemove, user => {
 	let Embed2 = new Discord.RichEmbed()
 		.setColor("#F20000")
 		.setTitle("Un membre viens de quitter le serveur !")
@@ -82,7 +82,7 @@ bot.on("message", (message) => {
 		let Embed7 = new Discord.RichEmbed()
 		.setImage(message.guild.iconURL)
 		.setFooter("FlyBot by Flymeth | BETA version")
-	message.channel.send(Embed7)
+	message.channel.send("l'icon du serveur est :" +message.guild.iconURL)
 	}
 
 })
