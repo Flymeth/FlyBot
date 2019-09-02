@@ -82,10 +82,8 @@ bot.on("message", message => {
 
 bot.on("message", message => {
 
-	if (message.content.startsWith(prefix + "icon")) {
-
+	if (message.content === "!icon") {
 		message.channel.send(message.guild.iconURL)
-
 	}
 })
 
