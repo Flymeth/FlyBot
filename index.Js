@@ -8,7 +8,7 @@ bot.on("ready", function () {
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
 
 	let Embed6 = new Discord.RichEmbed()
-		.setTitle("@Flymeth#6242")
+		.setTitle("Test " + nbtest)
 		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
 		.setImage(bot.user.displayAvatarURL)
 		.setColor("#10FF9B")
@@ -19,9 +19,9 @@ bot.on("ready", function () {
 
 //Variables (var):
 var prefix = ("!")
-var version = ("1.0.3")
-var interv = ("3") //L'interval est défini en seconde !
+var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
+var nbtest = ("15")
 
 //Variables (const):
 
@@ -48,7 +48,7 @@ bot.on("guildMemberRemove", user => {
 })
 
 //Conditions/commandes:
-bot.on("message", (message) => {
+bot.on("message", message => {
 	if(message.content === prefix + "help") {
 		let Embed3 = new Discord.RichEmbed()
 			.setColor("#FFFFFF")
@@ -78,9 +78,14 @@ bot.on("message", (message) => {
 		.setFooter("FlyBot by Flymeth | BETA version")
 	message.channel.send(Embed5)
 	}
+})
 
-	if(message.content === prefix + "icon") {
-		message.reply(message.guild.iconURL)
+bot.on("message", message => {
+
+	if (message.content.startsWith(prefix + "icon")) {
+
+		message.channel.send(message.guild.iconURL)
+
 	}
 })
 
