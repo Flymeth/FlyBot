@@ -77,6 +77,10 @@ bot.on("message", (message) => {
 		.setFooter("FlyBot by Flymeth | BETA version")
 	message.channel.send(Embed5)
 	}
+
+	if(message.content === prefix + "servicon") {
+		message.channel.send(message.guild.iconURL)
+	}
 })
 
 //TOKEN caché:
