@@ -78,8 +78,8 @@ bot.on("message", (message) => {
 	message.channel.send(Embed5)
 	}
 
-	if(message.content === prefix + "servicon") {
-		message.channel.send(message.guild.iconURL)
+	if(message.content === prefix + "icon") {
+		message.reply(message.guild.icon)
 	}
 })
 
