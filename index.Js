@@ -19,9 +19,9 @@ bot.on("ready", function () {
 
 //Variables (var):
 var prefix = ("!")
-var version = ("1.0.5")
+var version = ("1.0.7")
 var dbchannel = ("613055646862147600")
-var nbtest = ("16")
+var nbtest = ("17")
 
 //Variables (const):
 
@@ -84,6 +84,7 @@ bot.on("message", message => {
 		let Embed7 = new Discord.RichEmbed ()
 			.setColor("#4D00FF")
 			.setAuthor("Icon actuelle du serveur...", message.guild.iconURL)
+	message.channel.send(Embed7)
 	}
 })
 
