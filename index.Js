@@ -14,6 +14,8 @@ bot.on("ready", function () {
 		.setColor("#10FF9B")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(dbchannel).send(Embed6).catch(console.error)
+
+	let nbtest = nbtest + 1
 	
 })
 
@@ -21,7 +23,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.7")
 var dbchannel = ("613055646862147600")
-var nbtest = ("20")
+var nbtest = ("21")
 
 //Variables (const):
 
@@ -69,7 +71,7 @@ bot.on("message", message => {
 			.addField("🌐 Version:", version, true)
 			.addField("💻 Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("💬 Prochaîne mise à jour:", "-Ajout de nouvelles commandes \n-Réglage de la date", true)
-			.addField("🎮 Numero de test:", nbtest + "°")
+			.addField("🎮 Numero de test:", nbtest + "èmes")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed4)
 	}
@@ -91,7 +93,7 @@ bot.on("message", message => {
 	}
 
 	if (message.content === "Actif ?") {
-		message.react(":ok_hand:")
+		message.react("ok_hand")
 	}
 })
 
