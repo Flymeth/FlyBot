@@ -19,9 +19,9 @@ bot.on("ready", function () {
 
 //Variables (var):
 var prefix = ("!")
-var version = ("1.0.7")
+var version = ("1.0.8")
 var dbchannel = ("613055646862147600")
-var nbtest = ("22")
+var nbtest = ("23")
 
 //Variables (const):
 
@@ -54,10 +54,11 @@ bot.on("message", message => {
 			.setColor("#FFFFFF")
 			.setTitle("__Les commandes:__")
 			.addField("> !help", "*Affiche ce menu*")
+			.addField("> !help.tts", "*Lis à voix haute ce menu*")
 			.addField("> !info", "*Affiche les information du bot*")
 			.addField("> !servinfo", "*Affiche les information du serveur* (toujours en test)")
-			.addField("> !icon","Affiche l'icon actuelle du serveur")
-			.addField("> Actif ?", "Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif.")
+			.addField("> !icon","*Affiche l'icon actuelle du serveur*")
+			.addField("> !actif", "*Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif*")
 			.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 		message.channel.send(Embed3)
 	}
@@ -77,6 +78,7 @@ bot.on("message", message => {
 	if(message.content === prefix + "servinfo") {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
+		.setThumbnail(message.guild.iconURL)
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
 		.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 	message.channel.send(Embed5)
@@ -94,6 +96,9 @@ bot.on("message", message => {
 	if (message.content === prefix + "actif") {
 		message.react("👌")
 	}
+
+	if (message.content === prefix + "help.tts")
+		message.channel.send("/tts " + Embed3)
 })
 
 //TOKEN caché:
