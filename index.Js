@@ -21,7 +21,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.7")
 var dbchannel = ("613055646862147600")
-var nbtest = ("21")
+var nbtest = ("22")
 
 //Variables (const):
 
@@ -58,7 +58,7 @@ bot.on("message", message => {
 			.addField("> !servinfo", "*Affiche les information du serveur* (toujours en test)")
 			.addField("> !icon","Affiche l'icon actuelle du serveur")
 			.addField("> Actif ?", "Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif.")
-			.setFooter("FlyBot by Flymeth | BETA version")
+			.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 		message.channel.send(Embed3)
 	}
 
@@ -70,7 +70,7 @@ bot.on("message", message => {
 			.addField("💻 Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
 			.addField("💬 Prochaîne mise à jour:", "-Ajout de nouvelles commandes \n-Réglage de la date", true)
 			.addField("🎮 Numero de test:", nbtest + "èmes")
-			.setFooter("FlyBot by Flymeth | BETA version")
+			.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 		message.channel.send(Embed4)
 	}
 
@@ -78,7 +78,7 @@ bot.on("message", message => {
 		let Embed5 = new Discord.RichEmbed()
 		.setTitle("Information du serveur:")
 		.addField("Membres du serveur:", "**" + message.guild.memberCount + "**")
-		.setFooter("FlyBot by Flymeth | BETA version")
+		.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 	message.channel.send(Embed5)
 	}
 
@@ -87,10 +87,11 @@ bot.on("message", message => {
 			.setColor("#4D00FF")
 			.setDescription("Icon actuelle du serveur:")
 			.setThumbnail(message.guild.iconURL)
+			.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 	message.channel.send(Embed7)
 	}
 
-	if (message.content === "Actif ?") {
+	if (message.content === prefix + "actif") {
 		message.react("👌")
 	}
 })
