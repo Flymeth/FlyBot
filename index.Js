@@ -56,6 +56,7 @@ bot.on("message", message => {
 			.addField("> !help", "*Affiche ce menu*")
 			.addField("> !info", "*Affiche les information du bot*")
 			.addField("> !servinfo", "*Affiche les information du serveur* (toujours en test)")
+			.addField("> !icon","Affiche l'icon actuelle du serveur")
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed3)
 	}
@@ -66,7 +67,7 @@ bot.on("message", message => {
 			.setAuthor(":information_source: Information du bot :", "https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 			.addField("🌐 Version:", version, true)
 			.addField("👨‍💻 Bot developper:", "[Flymeth](https://discord.gg/yDeWzDH)", true)
-			.addField("💬 Prochaîne mise à jour:", "-Ajout de nouvelles commandes \n-Réglage de la date \n-Affichage de l'icon du serveur", true)
+			.addField("💬 Prochaîne mise à jour:", "-Ajout de nouvelles commandes \n-Réglage de la date", true)
 			.setFooter("FlyBot by Flymeth | BETA version")
 		message.channel.send(Embed4)
 	}
@@ -86,8 +87,6 @@ bot.on("message", message => {
 		message.channel.send(message.guild.iconURL)
 	}
 
-	if (message.content === prefix + "authericon")
-		message.guild.setIcon("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 })
 
 //TOKEN caché:
