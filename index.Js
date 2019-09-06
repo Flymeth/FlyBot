@@ -82,9 +82,12 @@ bot.on("message", message => {
 
 bot.on("message", message => {
 
-	if (message.content === "!icon") {
+	if (message.content === prefix + "icon") {
 		message.channel.send(message.guild.iconURL)
 	}
+
+	if (message.content === prefix + "authericon")
+		message.guild.setIcon("https://cdn.discordapp.com/attachments/613003356771713079/613003643565768776/images.png")
 })
 
 //TOKEN caché:
