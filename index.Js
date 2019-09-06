@@ -19,9 +19,9 @@ bot.on("ready", function () {
 
 //Variables (var):
 var prefix = ("!")
-var version = ("1.0.8")
+var version = ("1.0.9")
 var dbchannel = ("613055646862147600")
-var nbtest = ("23")
+var nbtest = ("24")
 
 //Variables (const):
 
@@ -98,7 +98,8 @@ bot.on("message", message => {
 	}
 
 	if (message.content === prefix + "help.tts")
-		message.channel.send("/tts " + Embed3)
+		message.channel.send("/tts !help, Affiche le menu d'aide. !help.tts, Lis à voix haute le menu d'aide. !info, Affiche les information du bote. !servinfo, Affiche les information du serveur, (toujours en test). !icon, Affiche l'icon actuelle du serveur, !actif, Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif")
+		message.channel.send("/tts !icon, Affiche l'icon actuelle du serveur, !actif, Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif")
 })
 
 //TOKEN caché:
