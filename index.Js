@@ -14,8 +14,6 @@ bot.on("ready", function () {
 		.setColor("#10FF9B")
 		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
 	bot.channels.get(dbchannel).send(Embed6).catch(console.error)
-
-	let nbtest = nbtest + 1
 	
 })
 
@@ -93,7 +91,7 @@ bot.on("message", message => {
 	}
 
 	if (message.content === "Actif ?") {
-		message.react("ok_hand")
+		message.react("👌")
 	}
 })
 
