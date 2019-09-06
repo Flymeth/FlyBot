@@ -21,7 +21,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
-var nbtest = ("15")
+var nbtest = ("16")
 
 //Variables (const):
 
@@ -79,14 +79,12 @@ bot.on("message", message => {
 		.setFooter("FlyBot by Flymeth | BETA version")
 	message.channel.send(Embed5)
 	}
-})
-
-bot.on("message", message => {
 
 	if (message.content === prefix + "icon") {
-		message.channel.send(message.guild.iconURL)
+		let Embed7 = new Discord.RichEmbed ()
+			.setColor("#4D00FF")
+			.setAuthor("Icon actuelle du serveur...", message.guild.iconURL)
 	}
-
 })
 
 //TOKEN caché:
