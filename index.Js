@@ -21,7 +21,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.7")
 var dbchannel = ("613055646862147600")
-var nbtest = ("18")
+var nbtest = ("19")
 
 //Variables (const):
 
@@ -86,6 +86,10 @@ bot.on("message", message => {
 			.setDescription("Icon actuelle du serveur:")
 			.setThumbnail(message.guild.iconURL)
 	message.channel.send(Embed7)
+	}
+
+	if (message.content.startsWith("Actif ?")) {
+		message.react(":ok_hand:")
 	}
 })
 
