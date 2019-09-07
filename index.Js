@@ -108,7 +108,7 @@ bot.on("message", message => {
 			.addField("dbchannel", "value: " + dbchannel)
 			.addField("nbtest", "value: " + nbtest)
 			.addField("game", "value: " + game)
-		message.channel.send()
+		message.channel.send(Embed8)
 })
 
 //TOKEN caché:
