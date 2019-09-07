@@ -22,6 +22,7 @@ var prefix = ("!")
 var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
 var nbtest = ("25")
+var game = ("1")
 
 //Variables (const):
 
@@ -97,6 +98,20 @@ bot.on("message", message => {
 		message.react("👌")
 	}
 })
+
+function I1() {
+	if(game === 1) {
+	bot.user.setGame("être en fase de test | !help").catch(console.error)
+	game = 0
+	}
+
+	if(game === 0) {
+	bot.user.setGame("créé par Flymeth | !help").catch(console.error)
+	game = 1
+	}
+}
+
+setInterval(I1, 2000)
 
 //TOKEN caché:
 bot.login(process.env.TOKEN)
