@@ -111,19 +111,5 @@ bot.on("message", message => {
 		message.channel.send()
 })
 
-function I1() {
-	if(game === 1) {
-	bot.user.setGame("être en fase de test | !help").catch(console.error)
-	game = 0
-	}
-
-	if(game === 0) {
-	bot.user.setGame("créé par Flymeth | !help").catch(console.error)
-	game = 1
-	}
-}
-
-setInterval(I1, 2000)
-
 //TOKEN caché:
 bot.login(process.env.TOKEN)
