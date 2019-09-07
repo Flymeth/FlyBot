@@ -21,7 +21,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
-var nbtest = ("25")
+var nbtest = ("26")
 var game = ("1")
 
 //Variables (const):
@@ -60,6 +60,7 @@ bot.on("message", message => {
 			.addField("> !servinfo", "*Affiche les information du serveur* (toujours en test)")
 			.addField("> !icon","*Affiche l'icon actuelle du serveur*")
 			.addField("> !actif", "*Si le bot marche correctement, alors votre message recevra une rèaction. Cela permet de voir si le bot est réellement actif*")
+			.addField("> !showvar", "*Affiche le nom et les valeurs des variables*")
 			.setFooter("FlyBot by Flymeth | BETA version | Version: " + version)
 		message.channel.send(Embed3)
 	}
@@ -97,6 +98,17 @@ bot.on("message", message => {
 	if (message.content === prefix + "actif") {
 		message.react("👌")
 	}
+
+	if(message.content === prefix + "showvar")
+		let Embed8 = new Discord.RichEmbed()
+			.setDescription("Voici les variable du bot :")
+			.setColor("#000000")
+			.addField("prefix", "value: " + prefix)
+			.addField("version", "value: " + version)
+			.addField("dbchannel", "value: " + dbchannel)
+			.addField("nbtest", "value: " + nbtest)
+			.addField("game", "value: " + game)
+		message.channel.send()
 })
 
 function I1() {
