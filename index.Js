@@ -98,17 +98,6 @@ bot.on("message", message => {
 	if (message.content === prefix + "actif") {
 		message.react("👌")
 	}
-
-	if(message.content === prefix + "showvar")
-		let Embed8 = new Discord.RichEmbed()
-			.setDescription("Voici les variable du bot :")
-			.setColor("#000000")
-			.addField("prefix", "value: " + prefix)
-			.addField("version", "value: " + version)
-			.addField("dbchannel", "value: " + dbchannel)
-			.addField("nbtest", "value: " + nbtest)
-			.addField("game", "value: " + game)
-	message.channel.send(Embed8)
 })
 
 //TOKEN caché:
