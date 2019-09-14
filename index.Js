@@ -21,7 +21,7 @@ bot.on("ready", function () {
 var prefix = ("!")
 var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
-var nbtest = ("26")
+var nbtest = ("27")
 var game = ("1")
 
 //Variables (const):
@@ -108,7 +108,7 @@ bot.on("message", message => {
 			.addField("dbchannel", "value: " + dbchannel)
 			.addField("nbtest", "value: " + nbtest)
 			.addField("game", "value: " + game)
-		message.channel.send(Embed8)
+	message.channel.send(Embed8)
 })
 
 //TOKEN caché:
