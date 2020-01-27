@@ -6,14 +6,6 @@ const bot = new Discord.Client()
 bot.on("ready", function () {
 
 	bot.user.setGame("être en fase de test | !help").catch(console.error)
-
-	let Embed6 = new Discord.RichEmbed()
-		.setTitle("Test " + nbtest)
-		.setDescription('Le bot "' + bot.user.username + '" est prêt à être testé !')
-		.setImage(bot.user.displayAvatarURL)
-		.setColor("#10FF9B")
-		.setFooter("FlyBot by Flymeth | BETA version | " + Date())
-	bot.channels.get(dbchannel).send(Embed6).catch(console.error)
 	
 })
 
@@ -23,30 +15,6 @@ var version = ("1.0.5")
 var dbchannel = ("613055646862147600")
 var nbtest = ("27")
 var game = ("1")
-
-//Variables (const):
-
-//Quand un membre rejoin le serveur:
-bot.on("guildMemberAdd", user => {
-	let Embed1 = new Discord.RichEmbed()
-		.setColor("#00F23E")
-		.setAuthor("Nouveau membre !")
-		.setThumbnail(user.user.displayAvatarURL)
-		.setDescription(user + " viens de rejoindre " + user.guild.name + " ! :heart:")
-		.setFooter("FlyBot by Flymeth | BETA version")
-	bot.guild.channels.get("612629378282684446").send(Embed1)
-
-})
-
-//Quand un membre quitte le serveur:
-bot.on("guildMemberRemove", user => {
-	let Embed2 = new Discord.RichEmbed()
-		.setColor("#F20000")
-		.setTitle("Un membre viens de quitter le serveur !")
-		.setDescription(user.user.username + " viens de nous quitter... :rage: !")
-		.setFooter("FlyBot by Flymeth | BETA version")
-	bot.guild.channels.get("612629378282684446").send(Embed2)
-})
 
 //Conditions/commandes:
 bot.on("message", message => {
